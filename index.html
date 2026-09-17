@@ -234,6 +234,9 @@ async function initCamera() {
         const s = await navigator.mediaDevices.getUserMedia(constraints);
         video.srcObject = s;
         video.setAttribute("playsinline", true);
+        video.setAttribute("autoplay", true);
+ 　　   video.setAttribute("muted", true);
+    　　video.muted = true;
         video.play();
         
         if (currentFacingMode === "user") {
